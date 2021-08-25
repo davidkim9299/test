@@ -22,11 +22,11 @@
 								<div>
 									<div class="row">
 												<br><br><br>
-												<img src="https://ifh.cc/g/4IiIeP.png" alt="" /><br><br><br>
+												<img src="https://ifh.cc/g/4IiIeP.png" width="200", height="200"><br><br>
 												
 												<input type="text" name="Customername" placeholder="Customer Name" /><br><br>
-												<input type="text" name="orderdate" placeholder="Order Date mmddyyyy" /><br><br>						
-												<input type="text" name="shippingdate" placeholder="Shipping Date mmddyyyy" /><br><br>
+												Order Date: <input type="date" id="orderdate"name="orderdate" placeholder="Order Date mmddyyyy" />						
+												Shipping Date: <input type="date" name="shippingdate" placeholder="Shipping Date mmddyyyy" /><br><br>
 												
 												<div>
 												<select name = "product1" size = "1">
@@ -203,9 +203,12 @@
 			</article>
 			
 					</div>
-					
+					<script>
+		document.getElementById("orderdate").valueAsDate = new Date();
+	  </script>
 					<script type="text/javascript" 
 				src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+				
 			<script type="text/javascript">
   				emailjs.init('user_qB90qCCSv8AviaLvtEJ8k')
 			</script>
@@ -230,6 +233,7 @@
     					});
 				});
       </script>
+	  
 
 </body>
 </html>
